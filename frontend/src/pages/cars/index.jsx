@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useRouter } from "next/router";
 import Link from 'next/link'
 import Head from "next/head"
+import { toast } from 'react-toastify'
 import { Button, FormControl, InputGroup } from 'react-bootstrap';
 import { Wrapper } from '../../components/wrapper';
 import { setupAPIClient } from '../../services/api'
@@ -31,6 +32,8 @@ export default  function Cars() {
     if (window.confirm('Você realmente deseja excluir esse carro?')) {
         const apiClient = setupAPIClient();
         await apiClient.delete(`cars/${_id}`);
+
+        toast.success('Carro excluído!')
         
         setCarsList(carsList.filter(car => car._id !== _id));
         
@@ -60,9 +63,9 @@ export default  function Cars() {
                 <thead className='table-dark mt-3'>
                     <tr>
                         {/* <th scope='col'>ID</th> */}
-                        <th scope='col'>Title</th>
+                        <th scope='col'>Título</th>
                         <th scope='col'>Brand</th>
-                        <th scope='col'>Price</th>
+                        <th scope='col'>Preço</th>
                         <th scope='col'>Ano</th>
                         <th scope='col'>Opções</th>
                     </tr>
