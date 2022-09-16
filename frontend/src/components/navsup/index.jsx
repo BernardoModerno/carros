@@ -6,8 +6,8 @@ export function NavSup () {
     return (
       <Navbar bg='dark' expand='lg' variant='dark'>
           <Container>
-              <Navbar.Brand as={Link} href='/cars' className="nav-link text-light">
-                <a className='text-white-50 px-2 text-decoration-none'>Catálogo de Carros</a>
+              <Navbar.Brand as={Link} href='/' className="nav-link text-light">
+                <a className='text-white-50 px-2 text-decoration-none'>Tela Inicial</a>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls='basic-navbar-nav' />
               <Navbar.Collapse id='basic-navbar-nav'>

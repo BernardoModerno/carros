@@ -31,8 +31,9 @@ export default  function Cars() {
     if (window.confirm('Você realmente deseja excluir esse carro?')) {
         const apiClient = setupAPIClient();
         await apiClient.delete(`cars/${_id}`);
-
+        
         setCarsList(carsList.filter(car => car._id !== _id));
+        
     }
   }
 
