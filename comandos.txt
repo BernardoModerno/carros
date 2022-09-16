@@ -1,2 +1,5 @@
 npx create-next-app frontend
 yarn dev
+yarn add react-bootstrap
+yarn add axios
+yarn add react-toastify
